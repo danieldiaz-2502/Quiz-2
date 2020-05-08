@@ -24,7 +24,6 @@ public class Cuadro implements Runnable {
 				Thread.sleep(3000);
 				mover();
 			} catch (InterruptedException e) {
-
 				e.printStackTrace();
 			}
 	
@@ -39,10 +38,6 @@ public class Cuadro implements Runnable {
 	public void mover() {
 		
 		posY += velY;
-		if(posY < 0) {
-			velY *= -1;
-		}
-
 	}
 
 	public PApplet getApp() {

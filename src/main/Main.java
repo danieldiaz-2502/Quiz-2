@@ -23,11 +23,11 @@ public class Main extends PApplet {
 
 	public void draw() {
 		  background(255, 255, 255);
+		  //para crear la matriz
 		  for( fila = 0; fila < 30 ; fila++) {
 	            for( columna = 0; columna < 20; columna++) {
 	                figura = new Cuadro(20*fila,20*columna,20,this);
 	                figura.dibujar();
-	                figura.mover();
 	                if(fila % 2 == 0 && columna % 2 == 0) {
 	                    fill(0);
 	                }
@@ -43,5 +43,7 @@ public class Main extends PApplet {
 	
 	 
 	public void mousePressed() {
+		//este debería ser el hilo
+		new Thread(figura).start();
 	}
 }
